@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 14:47:27 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/30 11:37:34 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:39:22 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	d = (char *)dst;
 	s = (char *)src;
-	len_s = strlen(s);
+	len_s = ft_strlen(s);
 	if (dstsize)
 	{
 		while (dstsize-- > 1 && *s != '\0')

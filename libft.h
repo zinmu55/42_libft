@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 16:51:07 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/04/30 12:18:01 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/01 12:57:02 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,12 @@ int					ft_toupper(int c);
 void				*ft_memchr(const void *buf, int ch, size_t n);
 int					ft_memcmp(const void *buf1, const void *buf2, size_t n);
 char				*ft_strchr(char *s, int c);
-int 				ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(char *big, char *little, size_t len);
 char				*ft_strrchr(char *s, int c);
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t n, size_t size);
 char				*ft_strdup(const char *string);
-
 
 // Additional
 char				*ft_itoa(int n);
@@ -57,7 +56,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr_fd(char *s, int fd);
 int					word_count(char const *s, char c);
 int					len_to_delimiter(char *s, char c);
-char				**ft_split(char *s, char c);
+char				**ft_split(char const *s, char c);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));

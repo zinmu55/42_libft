@@ -6,7 +6,7 @@
 #    By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 11:04:36 by yonuma            #+#    #+#              #
-#    Updated: 2024/04/30 14:15:53 by skohtake         ###   ########.fr        #
+#    Updated: 2024/05/01 15:04:03 by skohtake         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,17 +36,19 @@ SRCS = ft_isascii.c \
 	   ft_strnstr.c \
 	   ft_calloc.c \
 	   ft_strdup.c \
-# ft_split.c \
-# ft_substr.c \
-# ft_strtrim.c \
-# ft_strjoin.c \
+	   ft_substr.c \
+	   ft_strjoin.c \
+	   ft_strtrim.c \
+	   ft_split.c \
+	   ft_itoa.c \
+	   
 # ft_strmapi.c \
 # ft_striteri.c \
 # ft_putchar_fd.c \
 # ft_putstr_fd.c \
 # ft_putendl_fd.c \
 # ft_putnbr_fd.c \
-# ft_itoa.c \
+
 
 	
 
