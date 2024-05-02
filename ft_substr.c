@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 06:55:54 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 14:44:42 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:02:59 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (res);
 }
 
-/* Comment out rewuired below */
+// /* Comment out rewuired below */
 
-#include <string.h>
+// #include <string.h>
 
-int	main(void)
-{
-	char			*s;
-	unsigned int	start;
-	size_t			len;
+// int	main(void)
+// {
+// 	char			*s;
+// 	unsigned int	start;
+// 	size_t			len;
 
-	s = strdup("12345");
-	start = 6;
-	len = 5;
-	printf("result	:%s\n", ft_substr(s, start, len));
-	return (0);
-}
+// 	s = strdup("12345");
+// 	start = 6;
+// 	len = 5;
+// 	printf("result	:%s\n", ft_substr(s, start, len));
+// 	return (0);
+// }

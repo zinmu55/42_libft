@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 11:55:39 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:01:22 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	**ft_split(char const *s, char c)
 	int		cw;
 	int		i;
 
+	if (s == NULL)
+		return (NULL);
 	cw = count_words(s, c);
 	i = 0;
 	res = (char **)malloc(sizeof(char *) * (cw + 1));

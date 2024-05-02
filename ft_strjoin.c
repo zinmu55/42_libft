@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 07:36:32 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/01 07:51:08 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:59:29 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,19 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
+	int		len_s1;
+	int		len_s2;
 
-	res = NULL;
-	if (s1 == NULL || s2 == NULL) // check required
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	res = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	res = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 	if (res == NULL)
 		return (NULL);
-	(void)ft_strlcat(res, s1, ft_strlen(s1) + 1);
-	(void)ft_strlcat(res, s2, ft_strlen(s1) + ft_strlen(s2) + 1);
+	res[0] = '\0';
+	(void)ft_strlcat(res, s1, len_s1 + 1);
+	(void)ft_strlcat(res, s2, len_s1 + len_s2 + 1);
 	return (res);
 }
 
