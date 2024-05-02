@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:02:27 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/01 15:03:38 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:32:24 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ char	*ft_itoa(int n)
 		digits++;
 	ln = (long long int)n;
 	if (ln < 0)
-		res = (char *)malloc(sizeof(char) * digits + 2);
-	else
-		res = (char *)malloc(sizeof(char) * digits + 1);
+		digits++;
+	res = (char *)malloc(sizeof(char) * digits + 1);
 	if (res == NULL)
 		return (NULL);
 	if (ln < 0)
@@ -37,9 +36,10 @@ char	*ft_itoa(int n)
 		res[0] = '-';
 		ln = -ln;
 	}
-	while (digits > 0)
+	res[digits--] = '\0';
+	while (ln != 0)
 	{
-		res[digits - 1] = (ln % 10) + '0';
+		res[digits] = (ln % 10) + '0';
 		ln /= 10;
 		digits--;
 	}

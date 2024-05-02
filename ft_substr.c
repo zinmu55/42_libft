@@ -6,11 +6,13 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 06:55:54 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 15:02:59 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:34:07 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
