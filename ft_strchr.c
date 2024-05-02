@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 10:49:20 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/30 07:47:47 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/03 08:43:35 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c)
 {
 	char	*res;
+	char	target;
 
 	res = (char *)s;
+	target = (char)c;
 	while (*res)
 	{
-		if (*res == c)
+		if (*res == target)
 			return (res);
 		res++;
 	}
-	if (c == '\0')
+	if (target == '\0')
 		return (res);
 	return (0);
 }
@@ -38,14 +40,14 @@ char	*ft_strchr(const char *s, int c)
 // 	char	*s;
 // 	int		c;
 
-// 	// s = "Hello, World!";
-// 	s = "";
-// 	c = '\0';
+// 	s = "Hello, World!";
+// 	// s = "";
+// 	c = 'H';
 // 	printf("Expected\n");
 // 	printf("input <<< s:%s, c:%c\n", s, c);
-// 	printf("result	:%s\n", strchr(s, c));
+// 	printf("result	:%s\n", strchr(s, c + 256));
 // 	printf("Actual\n");
 // 	printf("input <<< s:%s, c:%c\n", s, c);
-// 	printf("result	:%s\n", ft_strchr(s, c));
+// 	printf("result	:%s\n", ft_strchr(s, c + 256));
 // 	return (0);
 // }

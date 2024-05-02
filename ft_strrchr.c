@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 07:12:25 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/29 07:38:34 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/03 08:42:07 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,20 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*str;
 	size_t	len;
+	char	target;
 
 	str = (char *)s;
+	target = (char)c;
 	len = 0;
 	while (str[len] != '\0')
 		len++;
 	while (len > 0)
 	{
-		if (str[len] == c)
+		if (str[len] == target)
 			return (&str[len]);
 		len--;
 	}
-	if (*str == c)
+	if (*str == target)
 		return (str);
 	return (0);
 }

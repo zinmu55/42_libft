@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:02:27 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 15:32:24 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/03 07:47:34 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_itoa(int n)
 	int				digits;
 	char			*res;
 
+	if (n == 0)
+		return (ft_strdup("0"));
 	ln = (long long int)n;
 	digits = 1;
 	res = 0;
