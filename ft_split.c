@@ -6,13 +6,13 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/01 12:58:51 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/02 11:55:39 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char		**ft_split(char const *s, char c);
+char		**ft_split(char const *s, char c);
 
 static int	count_words(char const *s, char const c)
 {
