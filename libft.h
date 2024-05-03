@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 16:51:07 by tuchikaw          #+#    #+#             */
-/*   Updated: 2024/05/01 12:57:02 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/03 09:20:45 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void				*ft_memchr(const void *buf, int ch, size_t n);
 int					ft_memcmp(const void *buf1, const void *buf2, size_t n);
 char				*ft_strchr(char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-char				*ft_strnstr(char *big, char *little, size_t len);
+char				*ft_strnstr(const char *haystack, const char *needle,
+						size_t len);
 char				*ft_strrchr(char *s, int c);
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t n, size_t size);

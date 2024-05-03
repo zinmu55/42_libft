@@ -6,11 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 09:37:50 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/03 08:46:14 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/03 09:28:19 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
@@ -34,7 +34,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			j++;
 		}
 		else
-			j = 0;
+		{
+			i -= j;
+			j -= j;
+		}
 		i++;
 	}
 	return (NULL);
@@ -45,18 +48,32 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // #include <stdio.h>
 // #include <string.h>
 
+// // int	main(void)
+// // {
+// // 	char	*haystack;
+// // 	char	*needle;
+// // 	size_t	len;
+
+// // 	// haystack = "Hello World!";
+// // 	haystack = NULL;
+// // 	needle = "World";
+// // 	// needle = "";
+// // 	len = 0;
+// // 	printf("Exp	:%s\n", strnstr(haystack, needle, len));
+// // 	printf("Act	:%s\n", ft_strnstr(haystack, needle, len));
+// // 	return (0);
+// // }
+
 // int	main(void)
 // {
-// 	char	*haystack;
-// 	char	*needle;
-// 	size_t	len;
+// 	char	haystack[30] = "aaabcabcd";
+// 	char	needle[10] = "aabc";
 
 // 	// haystack = "Hello World!";
-// 	haystack = NULL;
-// 	needle = "World";
+// 	// haystack = NULL;
+// 	// needle = "World";
 // 	// needle = "";
-// 	len = 0;
-// 	printf("Exp	:%s\n", strnstr(haystack, needle, len));
-// 	printf("Act	:%s\n", ft_strnstr(haystack, needle, len));
+// 	printf("Exp	:%s\n", strnstr(haystack, needle, -1));
+// 	printf("Act	:%s\n", ft_strnstr(haystack, needle, -1));
 // 	return (0);
 // }
