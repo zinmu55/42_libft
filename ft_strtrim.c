@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 07:52:59 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/03 08:18:41 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 08:29:15 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	while (is_set(s1[start], set) && start < end)
 		start++;
-	if (start == end)
+	if (end == 0)
 		return (ft_strdup(""));
+	// if (start == end)
+	// 	return (ft_strdup(""));
 	res = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (res == NULL)
 		return (NULL);
@@ -58,23 +60,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char	*s1;
-// 	char	*set;
-
-// 	s1 = strdup("+-+Hello+-+");
-// 	set = strdup("-+");
-// 	printf("res	:%s\n", ft_strtrim(s1, set));
-// 	free(s1);
-// 	free(set);
-// 	s1 = strdup("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !");
-// 	set = strdup(" \n\t");
-// 	printf("res	:%s\n", ft_strtrim(s1, set));
-// 	free(s1);
-// 	free(set);
-// 	s1 = strdup("     ");
-// 	set = strdup(" ");
-// 	printf("res	:%s\n", ft_strtrim(s1, set));
-// 	free(s1);
-// 	free(set);
+// 	// char	*s1;
+// 	// char	*set;
+// 	// s1 = strdup("+-+Hello+-+");
+// 	// set = strdup("-+");
+// 	// printf("res	:%s\n", ft_strtrim(s1, set));
+// 	// free(s1);
+// 	// free(set);
+// 	// s1 = strdup("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !");
+// 	// set = strdup(" \n\t");
+// 	// printf("res	:%s\n", ft_strtrim(s1, set));
+// 	// free(s1);
+// 	// free(set);
+// 	// s1 = strdup("     ");
+// 	// set = strdup(" ");
+// 	// printf("res	:%s\n", ft_strtrim(s1, set));
+// 	// free(s1);
+// 	// free(set);
+// 	printf("res	:%s\n", ft_strtrim("abcdba", "acb"));
 // 	return (0);
 // }
