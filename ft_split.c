@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 13:56:54 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:13:17 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void	memfree(char ***ptr, int index)
 	free(*ptr);
 }
 
-static void	skip_c(char **s, char c)
+static void	skip_c(char const **s, char c)
 {
 	while (**s == '\0' || **s == c)
 		(*s)++;
