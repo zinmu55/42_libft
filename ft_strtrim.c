@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 07:52:59 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 08:29:15 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 11:06:43 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	if (end == 0)
 		return (ft_strdup(""));
-	// if (start == end)
-	// 	return (ft_strdup(""));
 	res = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (res == NULL)
 		return (NULL);
