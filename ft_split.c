@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 13:16:31 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 13:52:04 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	wordlen(char const *s, char c)
 	return (res);
 }
 
-static void	memfree(char ***ptr, int index) // addhitional func
+static void	memfree(char ***ptr, int index)
 {
 	while (index >= 0)
 	{
@@ -56,7 +56,6 @@ static void	memfree(char ***ptr, int index) // addhitional func
 		index--;
 	}
 	free(*ptr);
-	return ;
 }
 
 char	**ft_split(char const *s, char c)
@@ -82,8 +81,7 @@ char	**ft_split(char const *s, char c)
 			memfree(&res, i);
 			return (NULL);
 		}
-		(void)ft_strlcpy(res[i], s, wordlen(s, c) + 1);
-		i++;
+		(void)ft_strlcpy(res[i++], s, wordlen(s, c) + 1);
 		s += wordlen(s, c);
 	}
 	res[i] = NULL;
