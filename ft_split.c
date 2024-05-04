@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 10:41:29 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 13:16:31 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	memfree(char ***ptr, int index) // addhitional func
 {
 	while (index >= 0)
 	{
-		free(*ptr[index]);
+		free((*ptr)[index]);
 		index--;
 	}
 	free(*ptr);
@@ -79,12 +79,12 @@ char	**ft_split(char const *s, char c)
 		res[i] = (char *)malloc(sizeof(char) * (wordlen(s, c) + 1));
 		if (res[i] == NULL)
 		{
-			memfree(&res, i); // addhitional line
+			memfree(&res, i);
 			return (NULL);
 		}
 		(void)ft_strlcpy(res[i], s, wordlen(s, c) + 1);
 		i++;
-		s += wordlen(s, c); //あやしい
+		s += wordlen(s, c);
 	}
 	res[i] = NULL;
 	return (res);
