@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 15:01:22 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 10:41:29 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	count_words(char const *s, char const c)
 	return (res);
 }
 
-int	wordlen(char const *s, char c)
+static int	wordlen(char const *s, char c)
 {
 	int	res;
 
@@ -46,6 +46,17 @@ int	wordlen(char const *s, char c)
 	while (s[res] != c && s[res] != '\0')
 		res++;
 	return (res);
+}
+
+static void	memfree(char ***ptr, int index) // addhitional func
+{
+	while (index >= 0)
+	{
+		free(*ptr[index]);
+		index--;
+	}
+	free(*ptr);
+	return ;
 }
 
 char	**ft_split(char const *s, char c)
@@ -67,18 +78,19 @@ char	**ft_split(char const *s, char c)
 			s++;
 		res[i] = (char *)malloc(sizeof(char) * (wordlen(s, c) + 1));
 		if (res[i] == NULL)
+		{
+			memfree(&res, i); // addhitional line
 			return (NULL);
+		}
 		(void)ft_strlcpy(res[i], s, wordlen(s, c) + 1);
 		i++;
-		s += wordlen(s, c);
+		s += wordlen(s, c); //あやしい
 	}
 	res[i] = NULL;
 	return (res);
 }
 
 // /* comment out required below */
-
-// #include <stdio.h>
 
 // int	main(void)
 // {
@@ -93,6 +105,31 @@ char	**ft_split(char const *s, char c)
 // 	i = 0;
 // 	printf("count words	:%d\n", count_words(str, c));
 // 	result = ft_split(str, c);
+// 	while (result[i])
+// 	{
+// 		printf("split[%d] output	;%s\n", i, result[i]);
+// 		i++;
+// 	}
+// 	printf("split[%d] output	;%s\n", i, result[i]);
+// 	while (result[i])
+// 		free(result[i++]);
+// 	free(result);
+// 	return (0);
+// }
+
+// int	main(void)
+// {
+// 	int		i;
+// 	char	**result;
+
+// 	// 	char	*str;
+// 	// 	char	c;
+// 	// str = "^^^1^^2a,^^^^3^^^^--h^^^^";
+// 	// c = '^';
+// 	// c = "\0";
+// 	i = 0;
+// 	// printf("count words	:%d\n", count_words(str, c));
+// 	result = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
 // 	while (result[i])
 // 	{
 // 		printf("split[%d] output	;%s\n", i, result[i]);
