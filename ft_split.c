@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 13:52:04 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 13:56:54 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,12 @@ static void	memfree(char ***ptr, int index)
 	free(*ptr);
 }
 
+static void	skip_c(char **s, char c)
+{
+	while (**s == '\0' || **s == c)
+		(*s)++;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -73,8 +79,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < cw)
 	{
-		while (*s == '\0' || *s == c)
-			s++;
+		skip_c(&s, c);
 		res[i] = (char *)malloc(sizeof(char) * (wordlen(s, c) + 1));
 		if (res[i] == NULL)
 		{
