@@ -6,45 +6,53 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:02:27 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/03 07:47:34 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/04 10:54:35 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n);
+char		*ft_itoa(int n);
+
+static char	*sub_itoa(char *res, long long int lln, int digits)
+{
+	if (lln < 0)
+	{
+		res[0] = '-';
+		lln = -lln;
+	}
+	res[digits--] = '\0';
+	while (lln != 0)
+	{
+		res[digits] = (lln % 10) + '0';
+		lln /= 10;
+		digits--;
+	}
+	return (res);
+}
 
 char	*ft_itoa(int n)
 {
-	long long int	ln;
+	long long int	lln;
 	int				digits;
 	char			*res;
 
 	if (n == 0)
 		return (ft_strdup("0"));
-	ln = (long long int)n;
+	lln = (long long int)n;
 	digits = 1;
-	res = 0;
-	while (ln /= 10)
+	while (lln / 10 != 0)
+	{
 		digits++;
-	ln = (long long int)n;
-	if (ln < 0)
+		lln /= 10;
+	}
+	lln = (long long int)n;
+	if (lln < 0)
 		digits++;
 	res = (char *)malloc(sizeof(char) * digits + 1);
 	if (res == NULL)
 		return (NULL);
-	if (ln < 0)
-	{
-		res[0] = '-';
-		ln = -ln;
-	}
-	res[digits--] = '\0';
-	while (ln != 0)
-	{
-		res[digits] = (ln % 10) + '0';
-		ln /= 10;
-		digits--;
-	}
+	res = sub_itoa(res, lln, digits);
 	return (res);
 }
 
