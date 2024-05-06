@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 07:36:32 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 14:59:29 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:38:21 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strjoin(char const *s1, char const *s2);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

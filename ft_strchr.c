@@ -6,11 +6,9 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 10:49:20 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/03 08:43:35 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:38:09 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strchr(const char *s, int c);
 
 char	*ft_strchr(const char *s, int c)
 {

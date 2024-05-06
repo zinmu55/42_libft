@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 10:00:03 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/30 12:19:43 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:37:11 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isalnum(int c);
 
 int	ft_isalnum(int c)
 {

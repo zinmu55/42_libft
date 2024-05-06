@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 07:52:59 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 11:06:43 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:38:55 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char		*ft_strtrim(char const *s1, char const *set);
 
 static int	is_set(char const c, char const *set)
 {

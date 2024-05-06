@@ -6,7 +6,7 @@
 #    By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 11:04:36 by yonuma            #+#    #+#              #
-#    Updated: 2024/05/04 14:00:14 by skohtake         ###   ########.fr        #
+#    Updated: 2024/05/06 12:31:56 by skohtake         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,13 +49,12 @@ SRCS = ft_isascii.c \
 	   ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
-INCLUDES = -I includes
 
 $(NAME) :    $(OBJS)
 	ar rc $@ $^
 
 %.o:%.c
-	$(CC) -c  $(CFLAGS) $^ -o $@ $(INCLUDES)
+	$(CC) -c  $(CFLAGS) $^ -o $@
 
 all : $(NAME)
 

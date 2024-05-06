@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:46:07 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/30 13:22:38 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:37:07 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_calloc(size_t count, size_t size);
 
 void	*ft_calloc(size_t count, size_t size)
 {

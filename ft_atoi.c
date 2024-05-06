@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 10:15:10 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/30 12:11:38 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:37:03 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int			ft_atoi(const char *str);
 
 static int	ft_isspace(int c)
 {

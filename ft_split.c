@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 14:13:17 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:33:43 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ static void	memfree(char ***ptr, int index)
 		index--;
 	}
 	free(*ptr);
+	ptr = NULL;
 }
 
 static void	skip_c(char const **s, char c)

@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 13:02:27 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/04 10:54:35 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:37:30 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char		*ft_itoa(int n);
 
 static char	*sub_itoa(char *res, long long int lln, int digits)
 {

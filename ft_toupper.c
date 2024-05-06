@@ -6,11 +6,9 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 10:09:22 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/28 10:38:25 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:39:07 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_toupper(int c);
 
 int	ft_toupper(int c)
 {

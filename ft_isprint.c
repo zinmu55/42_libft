@@ -6,11 +6,9 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 09:59:25 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/28 10:17:06 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:37:26 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_isprint(int c);
 
 int	ft_isprint(int c)
 {

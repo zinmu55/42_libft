@@ -6,11 +6,9 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 09:59:32 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/28 10:17:01 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:37:20 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_isascii(int c);
 
 int	ft_isascii(int c)
 {

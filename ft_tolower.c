@@ -6,11 +6,9 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 10:36:04 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/28 10:50:07 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:39:04 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_tolower(int c);
 
 int	ft_tolower(int c)
 {

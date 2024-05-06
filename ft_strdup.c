@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 13:59:05 by skohtake          #+#    #+#             */
-/*   Updated: 2024/04/30 14:19:08 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:38:12 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strdup(const char *s1);
 
 char	*ft_strdup(const char *s1)
 {

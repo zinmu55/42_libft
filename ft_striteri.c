@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:02:33 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 13:15:19 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:38:16 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

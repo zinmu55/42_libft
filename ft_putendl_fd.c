@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:30:11 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/02 14:02:26 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/06 12:37:56 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd)
 {
