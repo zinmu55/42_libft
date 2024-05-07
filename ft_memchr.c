@@ -6,11 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 08:10:54 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/06 12:37:34 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:54:51 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

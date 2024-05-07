@@ -6,11 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 07:12:25 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/06 12:38:51 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:55:38 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,11 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 13:23:20 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/06 12:37:41 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:54:58 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
