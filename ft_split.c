@@ -6,13 +6,11 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 11:47:52 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/07 10:55:15 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:34:20 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char		**ft_split(char const *s, char c);
 
 static int	count_words(char const *s, char const c)
 {
@@ -56,7 +54,7 @@ static void	memfree(char ***ptr, int index)
 		index--;
 	}
 	free(*ptr);
-	ptr = NULL;
+	*ptr = NULL;
 }
 
 static void	skip_c(char const **s, char c)

@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 11:51:37 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/07 10:55:06 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:33:21 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	p = b;
 	while (len--)
-		*p++ = c;
+		*p++ = (unsigned char)c;
 	return (b);
 }
 
