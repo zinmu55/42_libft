@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 12:41:00 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/07 10:54:40 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/10 07:42:49 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	*target;
 
-	target = s;
+	target = (char *)s;
 	while (n--)
 	{
 		*target = 0;

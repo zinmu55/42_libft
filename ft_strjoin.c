@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 07:36:32 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/06 12:38:21 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/10 07:41:03 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
-	int		len_s1;
-	int		len_s2;
+	size_t	len_s1;
+	size_t	len_s2;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
