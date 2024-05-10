@@ -6,7 +6,7 @@
 /*   By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 10:15:10 by skohtake          #+#    #+#             */
-/*   Updated: 2024/05/06 14:50:54 by skohtake         ###   ########.fr       */
+/*   Updated: 2024/05/10 09:22:36 by skohtake         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,32 +20,32 @@ static int	ft_isspace(int c)
 	return (target == ' ' || (target >= '\t' && target <= '\r'));
 }
 
-static long long	is_longlong(long long *res, int sign, char next)
+static int	flow_checker(long *res, int sign, char next)
 {
 	if (sign == 1)
 	{
-		if (*res > (LLONG_MAX - (next - '0')) / 10)
+		if (*res > (LONG_MAX - (next - '0')) / 10)
 		{
-			*res = LLONG_MAX;
-			return (0);
+			*res = LONG_MAX;
+			return (1);
 		}
 	}
 	if (sign == -1)
 	{
-		if (-(*res) < (LLONG_MIN + (next - '0')) / 10)
+		if (-(*res) < (LONG_MIN + (next - '0')) / 10)
 		{
-			*res = LLONG_MIN;
-			return (0);
+			*res = LONG_MIN;
+			return (1);
 		}
 	}
 	*res = *res * 10 + (next - '0');
-	return (1);
+	return (0);
 }
 
 int	ft_atoi(const char *str)
 {
-	int			sign;
-	long long	res;
+	int		sign;
+	long	res;
 
 	res = 0;
 	sign = 1;
@@ -59,7 +59,7 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		if (!is_longlong(&res, sign, *str))
+		if (flow_checker(&res, sign, *str))
 			return ((int)res);
 		str++;
 	}
