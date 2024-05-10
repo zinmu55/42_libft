@@ -6,13 +6,12 @@
 #    By: skohtake <skohtake@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 11:04:36 by yonuma            #+#    #+#              #
-#    Updated: 2024/05/06 12:31:56 by skohtake         ###   ########.fr        #
+#    Updated: 2024/05/10 10:46:06 by skohtake         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc
-CFRAGS = -Wall -Wextra -Werror
 NAME = libft.a
+
 SRCS = ft_isascii.c \
 	   ft_isprint.c \
 	   ft_isalnum.c \
@@ -50,19 +49,26 @@ SRCS = ft_isascii.c \
 
 OBJS = $(SRCS:.c=.o)
 
-$(NAME) :    $(OBJS)
+RM = rm -f
+
+CC = cc -c
+
+CFRAGS = -Wall -Wextra -Werror
+
+$(NAME) : $(OBJS)
 	ar rc $@ $^
+	ranlib $(NAME)
 
 %.o:%.c
-	$(CC) -c  $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@
 
 all : $(NAME)
 
 clean : 
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 
 fclean : clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re : fclean all
 
